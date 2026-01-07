@@ -2,6 +2,7 @@ import { fromTypes, openapi } from "@elysiajs/openapi";
 import { Elysia } from "elysia";
 import { advancedRoutes } from "./routes/advanced";
 import { authRoutes } from "./routes/auth";
+import { hooksDemoRoutes } from "./routes/hooks-demo";
 import { orderRoutes } from "./routes/order";
 import { productRoutes } from "./routes/product";
 import { searchRoutes } from "./routes/search";
@@ -34,6 +35,7 @@ const app = new Elysia()
 	.use(orderRoutes)
 	.use(advancedRoutes)
 	.use(authRoutes)
+	.use(hooksDemoRoutes)
 	.listen(3000);
 
 console.log(
